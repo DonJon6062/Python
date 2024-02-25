@@ -49,9 +49,11 @@ numNum = int(input("Enter a number in numerical form please... "))
 
 while True:
     if numNum > 30:
-        print("That's not the number I was thinking of. Go lower.")
+        print("That's not the number I was thinking of. ")
+        break
     elif numNum < 30: 
-        print("That's not the number I was thinking of. Go higher.")
+        print("That's not the number I was thinking of. ")
+        break
     elif numNum == 30:
         print("That's what I was thinking!")
         break
@@ -74,3 +76,15 @@ while count > 0:
     print(count)
     count -= 1
 print("Zero!!!")
+
+#function w/o arguement accepted and w/o return value
+def greet():
+    print(f"Hi, {firstName}! ")
+#function w/ arguement accepted, w/ return value
+def addNums(num, numNum):
+    sum = num + numNum
+    return sum
+#function w/ arguement accepted and w/o return value
+result = addNums(1,2)
+print("Your lucky number is ", result)
+#function w/o arguement accepted and w/ return value
