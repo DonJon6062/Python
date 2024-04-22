@@ -13,7 +13,7 @@ root.title("Torfam: The Title My Friend Gave This Game Upon Asking For Them To G
 wordsFrame = tk.Frame(root)
 # Add the frame using the grid layout
 wordsFrame.grid(row=0, column=0, pady = 50, sticky="nsew")
-root.grid_rowconfigure(1, weight=1)
+root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
 wordsFrame.grid_rowconfigure(0, weight=1)
 wordsFrame.grid_columnconfigure(0, weight=1)
@@ -35,10 +35,10 @@ def introductionText():
 def buttonChoiceOne():
         #choice one
         choiceButton1 = tk.Button(root, text= "1", command = buttonSelectionOne)
-        choiceButton1.grid(row=0, column=0)
+        choiceButton1.grid(row=1, column=0)
         #choice two
         choiceButton2 = tk.Button(root, text= "2", command = buttonSelectionTwo)
-        choiceButton2.grid(row=0, column=1)
+        choiceButton2.grid(row=1, column=1)
 
 def buttonSelectionOne():
     #consequences
@@ -54,20 +54,20 @@ def buttonSelectionTwo():
 def choiceUn(): 
         #disable previous buttons
         choiceButton1 = tk.Button(root, text= "1", state = "disabled")
-        choiceButton1.grid(row=0, column=0)
+        choiceButton1.grid(row=1, column=0)
 
         choiceButton2 = tk.Button(root, text= "2", state = "disabled")
-        choiceButton2.grid(row=0, column=1)
+        choiceButton2.grid(row=1, column=1)
        
         #choice; prepare
         choiceUnText = " \n What now? Is there time to prepare, or will you /head/ out? (1 or 2): "
         textBoxText.insert(tk.INSERT, choiceUnText)
 
         choiceUnTextButton1 = tk.Button(root, text = "1", command = buttonUnSelectionOne)
-        choiceUnTextButton1.grid(row=0, column=0)
+        choiceUnTextButton1.grid(row=1, column=0)
 
         choiceUnTextButton2 = tk.Button(root, text = "2", command = buttonUnSelectionTwo)
-        choiceUnTextButton2.grid(row=0, column=1)
+        choiceUnTextButton2.grid(row=1, column=1)
 
 def buttonUnSelectionOne():
       buttonSelectionOneText = " \n Fumbling about more, you ram your foot into something hard. It is a box. \n The items inside are heavy. You can only really carry one and remember where it is. \n 'Cause all you have is touch to lead you \n You can't even smell it. \n Or taste it. \n It's all up to memory. \n 1. The hollow metal thing seems useful. \n 2. The thick wooden thing is probably good. \n 3. The heavy cloth with something inside, please! "
@@ -82,20 +82,20 @@ def buttonUnSelectionTwo():
 def choiceUnPtOne():
         #disable previous buttons
         choiceUnTextButton1 = tk.Button(root, text = "1", state = "disabled")
-        choiceUnTextButton1.grid(row=0, column=0)
+        choiceUnTextButton1.grid(row=1, column=0)
 
         choiceUnTextButton2 = tk.Button(root, text = "2", state = "disabled")
-        choiceUnTextButton2.grid(row=0, column=1)
+        choiceUnTextButton2.grid(row=1, column=1)
         
         #choice; prepare
         choiceUnPtOneTextButtonOne = tk.Button(root, text = "1", command = buttonUnPtOneSelectionOne)
-        choiceUnPtOneTextButtonOne.grid(row=0, column=0)
+        choiceUnPtOneTextButtonOne.grid(row=1, column=0)
 
         choiceUnPtOneTextButtonTwo = tk.Button(root, text = "2", command = buttonUnPtOneSelectionTwo)
-        choiceUnPtOneTextButtonTwo.grid(row=0, column=1)
+        choiceUnPtOneTextButtonTwo.grid(row=1, column=1)
 
         choiceUnPtOneTextButtonThree = tk.Button(root, text = "3", command = buttonUnPtOneSelectionThree)
-        choiceUnPtOneTextButtonThree.grid(row=0, column=2)
+        choiceUnPtOneTextButtonThree.grid(row=1, column=2)
 
 #choice-ception
 #choice within a choice; broom, pot and sack of potatoes
@@ -120,26 +120,26 @@ def buttonUnPtOneSelectionThree():
 def choiceUnPtTwo():
       #disable previous buttons
         choiceUnPtOneTextButtonOne = tk.Button(root, text = "1", state = "disabled")
-        choiceUnPtOneTextButtonOne.grid(row=0, column=0)
+        choiceUnPtOneTextButtonOne.grid(row=1, column=0)
 
         choiceUnPtOneTextButtonTwo = tk.Button(root, text = "2", state = "disabled")
-        choiceUnPtOneTextButtonTwo.grid(row=0, column=1)
+        choiceUnPtOneTextButtonTwo.grid(row=1, column=1)
 
         choiceUnPtOneTextButtonThree = tk.Button(root, text = "3", state = "disabled")
-        choiceUnPtOneTextButtonThree.grid(row=0, column=2)
+        choiceUnPtOneTextButtonThree.grid(row=1, column=2)
 
         #move somewhere
         choiceUnPtTwoText = " \n Without a brain, you can't remember where.. anything is. Welp, the only way is forward.\n Where /is/ forward?"
         textBoxText.insert(tk.INSERT, choiceUnPtTwoText)
 
         choiceUnPtTwoTextButtonOne = tk.Button(root, text = "Northwest", command = buttonUnPtTwoSelectionOne)
-        choiceUnPtTwoTextButtonOne.grid(row=0, column=0)
+        choiceUnPtTwoTextButtonOne.grid(row=1, column=0)
 
         choiceUnPtTwoTextButtonTwo = tk.Button(root, text = "North", command = buttonUnPtTwoSelectionTwo)
-        choiceUnPtTwoTextButtonTwo.grid(row=0, column=1) 
+        choiceUnPtTwoTextButtonTwo.grid(row=1, column=1) 
 
         choiceUnPtTwoTextButtonThree = tk.Button(root, text = "Northeast", command = buttonUnPtTwoSelectionThree) 
-        choiceUnPtTwoTextButtonThree.grid(row=0, column=2)
+        choiceUnPtTwoTextButtonThree.grid(row=1, column=2)
 
 def buttonUnPtTwoSelectionOne():
     buttonUnPtTwoSelectionOneText = " \n Soon enough, dried leaves crunch around you, and the occasional patch of grass tickles your ankle. You trip over a root, and ram into a tree trunk. \n HARD.\n Something falls on your head! You can see! The bees whose hive is on your neck don't seem as happy.."
